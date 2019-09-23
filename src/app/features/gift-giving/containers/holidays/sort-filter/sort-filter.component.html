@@ -1,9 +1,11 @@
 <div class="btn-group"
      role="group">
   <button type="button"
+          [disabled]="(showAll$ | async) === true"
           (click)="viewAll()"
           class="btn btn-secondary">View All</button>
   <button type="button"
+          [disabled]="(showAll$ | async) === false"
           (click)="showOnlyUpcoming()"
           class="btn btn-secondary">Only Upcoming</button>
 </div>

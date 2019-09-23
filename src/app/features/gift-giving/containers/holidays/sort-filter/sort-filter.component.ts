@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { GiftGivingState } from '../../../reducers';
+import { GiftGivingState, selectShowAllHolidays } from '../../../reducers';
 import { Store } from '@ngrx/store';
 import * as actions from '../../../actions/sort-filter.actions';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-sort-filter',
@@ -9,10 +10,11 @@ import * as actions from '../../../actions/sort-filter.actions';
   styleUrls: ['./sort-filter.component.css']
 })
 export class SortFilterComponent implements OnInit {
-
+  showAll$: Observable<boolean>;
   constructor(private store: Store<GiftGivingState>) { }
 
   ngOnInit() {
+    this.showAll$ = this.store.select(selectShowAllHolidays);
   }
 
   viewAll() {
