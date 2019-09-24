@@ -15,3 +15,7 @@ export const sortHolidaysByName = createAction(
 export const sortHolidaysByDate = createAction(
   '[gift-giving] sort holidays by date'
 );
+
+export const loadSavedPrefs = createAction(
+  '[gift-giving] load saved preferences'
+);
