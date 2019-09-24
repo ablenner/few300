@@ -6,7 +6,8 @@ import { Environment } from './models';
 
 export const environment: Environment = {
   production: false,
-  holidayUrl: 'http://localhost:3000/holidays/'
+  holidayUrl: 'http://localhost:3000/holidays/',
+  friendUrl: 'http://localhost:3000/friends/'
 };
 
 /*
