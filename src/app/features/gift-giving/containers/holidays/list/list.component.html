@@ -1,3 +1,8 @@
+<div class="alert alert-info"
+     *ngIf="model.length === 0">
+  <h3>You have no holidays! Add some!</h3>
+</div>
+
 <ul class="list-unstyled">
   <li class="alert"
       [ngClass]="{'alert-success': !holiday.past, 'alert-info': holiday.past}"

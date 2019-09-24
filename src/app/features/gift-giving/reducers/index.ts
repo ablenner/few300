@@ -25,6 +25,9 @@ const selectHolidayArray = createSelector(selectHolidaysBranch, fromHolidays.sel
 export const selectShowAllHolidays = createSelector(selectUiHintsBranch, b => b.showAll);
 export const selectSortingHolidaysBy = createSelector(selectUiHintsBranch, b => b.sortHolidaysBy);
 // then what your components need.
+
+export const selectHolidaysLoaded = createSelector(selectUiHintsBranch, b => b.holidaysLoaded);
+
 const selectHolidayListItemsUnfiltered = createSelector(selectHolidayArray, holidays =>
   holidays.map(holiday => ({
     id: holiday.id,
