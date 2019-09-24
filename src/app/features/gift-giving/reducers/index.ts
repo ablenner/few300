@@ -33,7 +33,8 @@ const selectHolidayListItemsUnfiltered = createSelector(selectHolidayArray, holi
     id: holiday.id,
     date: holiday.date,
     name: holiday.name,
-    past: new Date(holiday.date) < new Date()
+    past: new Date(holiday.date) < new Date(),
+    isTemporary: holiday.id.startsWith('T')
   } as HolidayListItem))
 );
 

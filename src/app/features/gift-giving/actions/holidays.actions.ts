@@ -14,6 +14,16 @@ export const holidayAdded = createAction(
   })
 );
 
+export const holidayAddedSuccess = createAction(
+  '[gift giving] holiday added success',
+  props<{ oldId: string, newEntity: HolidayEntity }>()
+);
+
+export const holidayAddedFailure = createAction(
+  '[gift giving] holiday added failure',
+  props<{ message: string, entity: HolidayEntity }>()
+);
+
 export const loadHolidayData = createAction(
   '[gift giving] load holiday data'
 );

@@ -9,5 +9,6 @@
       *ngFor="let holiday of model">
     <h5>{{ holiday.name }}</h5>
     <p>{{ holiday.date | date:'fullDate' }}</p>
+    <p>Saved: {{ !holiday.isTemporary }}</p>
   </li>
 </ul>

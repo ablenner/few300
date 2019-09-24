@@ -3,5 +3,6 @@ export interface HolidayListItem {
   name: string;
   date: string;
   past: boolean;
+  isTemporary: boolean;
 }
 
